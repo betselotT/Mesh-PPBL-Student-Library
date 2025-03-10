@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 // Add your Maestro API Key here:
-const maestroApiKey = "";
+const maestroApiKey = "zm9KGHFZ7F1OqDpquHrpwi6J7OsIsMFa";
 
 export default function MaestroExample() {
   const maestroProvider = new MaestroProvider({
@@ -16,7 +16,8 @@ export default function MaestroExample() {
   });
 
   // enter an address here:
-  const address = "";
+  const address =
+    "addr_test1qqd0tp6ctxzsdy4laua00857a0vzjnhhswtkuzjsszd9gvhwrth37fs684xxr6r5nfwdrdhq4v2j3rnx50jmv0652stsanjst6";
 
   // Project:
   // If you are familiar with React, build a form that allows a user to query a blockchain address.
@@ -39,12 +40,23 @@ export default function MaestroExample() {
         {maestroApiKey.length === 0 && (
           <div className="p-2 my-5 bg-gray-300">
             A Maestro API key is required to use this example. See{" "}
-            <Link href="https://pbl.meshjs.dev/course/mesh/102/lesson/1">Mesh PBL Lesson 102.1 to learn more</Link>.
+            <Link href="https://pbl.meshjs.dev/course/mesh/102/lesson/1">
+              Mesh PBL Lesson 102.1 to learn more
+            </Link>
+            .
           </div>
         )}
         {query.isLoading && <p className="p-2 my-5 bg-gray-300">Loading...</p>}
-        {query.isFetched && <pre className="p-2 my-5 bg-gray-300">{JSON.stringify(query.data, null, 2)}</pre>}
-        <Button className="mt-3" onClick={() => setMakeQuery(true)} disabled={maestroApiKey.length === 0}>
+        {query.isFetched && (
+          <pre className="p-2 my-5 bg-gray-300">
+            {JSON.stringify(query.data, null, 2)}
+          </pre>
+        )}
+        <Button
+          className="mt-3"
+          onClick={() => setMakeQuery(true)}
+          disabled={maestroApiKey.length === 0}
+        >
           Make Query
         </Button>
       </CardContent>

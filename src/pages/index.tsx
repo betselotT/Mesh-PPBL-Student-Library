@@ -1,3 +1,4 @@
+import SendTransaction from "@/components/SendTransaction";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -77,6 +78,8 @@ export default function Home() {
           url={demo.url}
         />
       ))}
+
+      <SendTransaction />
     </div>
   );
 }
