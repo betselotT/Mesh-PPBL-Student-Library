@@ -1,3 +1,4 @@
+import SendAssets from "@/components/sendAssets";
 import SendTransaction from "@/components/SendTransaction";
 import { Button } from "@/components/ui/button";
 import {
@@ -80,6 +81,8 @@ export default function Home() {
       ))}
 
       <SendTransaction />
+
+      <SendAssets />
     </div>
   );
 }
