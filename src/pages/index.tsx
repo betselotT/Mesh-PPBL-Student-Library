@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
+import StakingPage from "../components/DelegateStake";
 
 const demos = [
   {
@@ -83,6 +84,8 @@ export default function Home() {
       <SendTransaction />
 
       <SendAssets />
+
+      <StakingPage />
     </div>
   );
 }
