@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@maestro-org/typescript-sdk": "^1.6.3",
     "@meshsdk/core": "^1.5.24",
     "@meshsdk/react": "^1.1.12",
     "@radix-ui/react-avatar": "^1.0.4",
