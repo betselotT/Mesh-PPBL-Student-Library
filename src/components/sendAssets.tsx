@@ -21,7 +21,7 @@ export default function SendAssets() {
     "addr_test1vpvx0sacufuypa2k4sngk7q40zc5c4npl337uusdh64kv0c7e4cxr"
   );
   const [assetUnit, setAssetUnit] = useState(
-    "64af286e2ad0df4de2e7de15f8ff5b3d27faecf4ab2757056d860a424d657368546f6b656e"
+    "5e74a87d8109db21fe3d407950c161cd2df7975f0868e10682a3dbfe7070626c323032342d73636166666f6c642d746f6b656e"
   );
   const [quantity, setQuantity] = useState("1");
   const [loading, setLoading] = useState(false);
@@ -52,7 +52,6 @@ export default function SendAssets() {
       const unsignedTx = await tx.build();
       const signedTx = await wallet.signTx(unsignedTx);
       const txHash = await wallet.submitTx(signedTx);
-
     } catch (error) {
       console.error(error);
       setMessage("Transaction failed. Please try again.");
